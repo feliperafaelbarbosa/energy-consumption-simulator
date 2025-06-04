@@ -8,7 +8,7 @@ Provide a basis for simulating energy consumption in workflows, enabling studies
 
 ## Functionality
 
-- Simulation of scientific workflows in *HPC* systems.
+- Simulation of scientific workflows in **HPC** systems.
 - Generation of synthetic workflows with tools such as **Wfcommons**.
 - Collection and export of energy consumption metrics in **CSV** format files.
 
