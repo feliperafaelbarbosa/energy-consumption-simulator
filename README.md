@@ -1,77 +1,76 @@
 # Workflow Energy Consumption Simulator
 
-Este repositório contém scripts e ferramentas para simular o consumo de energia durante a execução de workflows científicos utilizando o **WRENCH**. O objetivo é explorar e entender como diferentes configurações de workflows impactam o consumo de energia.
+This repository brings together scripts and tools to simulate energy consumption in scientific workflows using **WRENCH**. The goal is to help understand how different workflow configurations affect **energy consumption** and the use of **computational resources**.
 
-## Objetivo do Projeto
+## Project Objective
 
-Proporcionar uma base para a simulação de consumo energético em workflows, permitindo estudos e análises que contribuam para o desenvolvimento de estratégias mais eficientes e sustentáveis.
+Provide a basis for simulating energy consumption in workflows, enabling studies and analyses that contribute to the development of more efficient and sustainable strategies.
 
-## Funcionalidades
+## Functionality
 
-- Simulação de consumo de energia para diferentes workflows científicos.
-- Geração de workflows sintéticos com ferramentas como o **Wfcommons**.
-- Coleta e exportação de métricas de consumo energético em arquivo no formato **CSV**.
+- Simulation of scientific workflows in *HPC* systems.
+- Generation of synthetic workflows with tools such as **Wfcommons**.
+- Collection and export of energy consumption metrics in **CSV** format files.
 
-## Ferramentas Utilizadas
+## Used tools
 
-- **WRENCH**: Framework de simulação para sistemas de gerenciamento de workflows.
-- **Wfcommons**: Ferramenta para modelagem e geração de workflows sintéticos.
-- **Python**: Para a automação e análise dos resultados.
-- **C++**: Para o desenvolvimento da simulação.
-- **Docker**: Para configuração de ambientes reprodutíveis.
+- **WRENCH**: A simulation framework for workflow management systems.
+- **Wfcommons**: Tool for modeling and generating synthetic workflows.
+- **Python**: For automation and analysis of results.
+- **C++**: For simulation development.
+- **Docker**: For configuring reproducible environments.
 
-## Estrutura do Repositório
+## Repository structure
 
 ```bash
-GreenWorkSim/
-├── datas/                 # Dados obtidos através das simulações
-├── include/               # Cabeçalhos de código
-├── platforms/             # Arquivos e scripts relacionados a diferentes plataformas simuladas
-├── src/                   # Código-fonte principal do projeto
-├── workflows/             # Workflows utilizados para as simulações
-├── docker-compose.yml     # Arquivo de configuração para ambientes Docker
-└── start.sh               # Script para inicializar a simulação
-
+{path}/energy-consumption-simulator/
+├── datas/                 # Data obtained through simulations
+├── include/               # Code headers
+├── notebooks/             # Jupyter Notebooks with Machine Learning results
+├── platforms/             # Files and scripts related to different simulated platforms
+├── src/                   # Main source code of the project
+├── workflows/             # Workflows metrics used for simulations
+   ├── blast/
+   ├── epigenomics/
+   ├── montage/
 ```
 
-## Pré-requisitos
+## Pre requisites
 
-Antes de começar, certifique-se de ter:
-
-- Python 3.8 ou superior
+Before you begin, make sure you have:
 - Docker
-- Wfcommons CLI
 
-## Como Usar
+## How to Use
 
-### 1. Configuração do Ambiente
+### 1. Environment Setup
 
-Clone o repositório e instale as dependências:
+Clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/feliperafaelbarbosa/GreenWorkSim.git
-cd GreenWorkSim
+git clone https://github.com/feliperafaelbarbosa/energy-consumption-simulator.git
+cd energy-consumption-simulator
 ```
 
-### 2. Geração de Workflows
+### 2. Workflow Generation
+Inside the Docker container, install WfCommons.
+Create synthetic workflows using the `wfgenrecipe.py` script located in the `src` folder. THe files will be generated in the `workflows/` directory.
 
-Crie workflows sintéticos utilizando o script `wfgenrecipe.py` na pasta src e os arquivos serão gerados na pasta `workflows/`.
+### 3. Project Compilation and Build
 
-### 3. Compilação e Build do Projeto
+Create a folder named `build` in the root of the project, enter the folder, run `cmake ..` and then `make`
 
-Crie uma pasta com o nome `build` na raiz do projeto, entre na pasta, e execute `cmake ..` e depois `make`
+### 4. Starting the Simulation
 
-### 4. Inicializando a Simulação
+Navigate to the root of the project and run the `start.sh` script. The simulation results will be generated in the `/data` directory.
 
-Navegue até a raiz do projeto, e execute o script nomeado de `start.sh`, e então o resultado das simulações serão geradas no diretório `/data`.
+## Contributing
 
-## Contribuição
+Contributions are welcome! Feel free to:
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
+- Open **issues** to report problems or suggest improvements.
 
-- Abrir **issues** para reportar problemas ou sugerir melhorias.
-- Enviar **pull requests** com novas funcionalidades ou correções.
+- Submit **pull requests** with new features or fixes.
 
-## Licença
+## License
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+This project is licensed under the [Licença MIT](LICENSE).
