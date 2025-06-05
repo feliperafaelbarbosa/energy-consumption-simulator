@@ -2,7 +2,7 @@
 
 ![Static Badge](https://img.shields.io/badge/2.3-gray?style=for-the-badge&label=WRENCH&labelColor=orange)
 ![Static Badge](https://img.shields.io/badge/1.5-gray?style=for-the-badge&label=WfCommons&labelColor=green)
-![Static Badge](https://img.shields.io/badge/3.8-gray?style=for-the-badge&label=Docker&labelColor=blue)
+![Static Badge](https://img.shields.io/badge/28.2.2-gray?style=for-the-badge&label=Docker&labelColor=blue)
 
 This repository brings together scripts and tools to simulate energy consumption in scientific workflows using **WRENCH**. The goal is to help understand how different workflow configurations affect **energy consumption** and the use of **computational resources**.
 
